@@ -23,11 +23,13 @@ struct LinkedList<Value>{
     mutating func append(_ value: Value){
         if isEmpty{
             push(value)
+        }else{
+            let node = Node(value: value)
+            self.tail?.next = node
+            self.tail = node
         }
         
-        let node = Node(value: value)
-        self.tail?.next = node
-        self.tail = node
+        
     }
     
     func node(at index: Int) -> Node<Value>?{
@@ -124,4 +126,18 @@ extension LinkedList : CustomStringConvertible{
         }
         return String(describing: head)
     }
+}
+
+
+func addTwoNodes(n1 : Node<Int>?, n2: Node<Int>?){
+    var l1 = n1
+    var l2 = n2
+    var linkedList = LinkedList<Int>()
+    while l1 != nil{
+        linkedList.append(l1!.value+l2!.value)
+        l1 = l1?.next
+        l2 = l2?.next
+    }
+    print(linkedList)
+    
 }

@@ -50,3 +50,17 @@ print(linkedList)
 //stack.enqueue(50)
 //print(stack.head)
 //print(stack.dequeue())
+
+
+var linkedList1 = LinkedList<Int>()
+linkedList1.push(1)
+linkedList1.push(2)
+linkedList1.push(3)
+print(linkedList1)
+var linkedList2 = LinkedList<Int>()
+linkedList2.push(4)
+linkedList2.push(5)
+linkedList2.push(6)
+print(linkedList2)
+
+addTwoNodes(n1: linkedList1.head!, n2: linkedList2.head!)
