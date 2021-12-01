@@ -28,24 +28,25 @@ extension Node: CustomStringConvertible{
 
 
 
-//var linkedList = LinkedList<Int>()
-//linkedList.push(1)
-//linkedList.push(22)
-//linkedList.push(33)
-//linkedList.append(99)
-//let middleNode = linkedList.node(at: 1)!
-//
-//print(linkedList)
-//print(linkedList.remove(after: middleNode))
-//
-//
-//print(linkedList)
-//print(linkedList.head?.value)
-//print(linkedList.tail?.value)
+var linkedList = LinkedList<Int>()
+linkedList.push(1)
+linkedList.push(22)
+linkedList.push(33)
+linkedList.append(99)
+let middleNode = linkedList.node(at: 1)!
 
-var stack = Queue<Int>()
-stack.enqueue(10)
-stack.enqueue(20)
-stack.enqueue(50)
-print(stack.head)
-print(stack.dequeue())
+print(linkedList)
+print(linkedList.remove(after: middleNode))
+
+
+print(linkedList)
+print(linkedList.head?.value)
+print(linkedList.tail?.value)
+linkedList.reverse()
+print(linkedList)
+//var stack = Queue<Int>()
+//stack.enqueue(10)
+//stack.enqueue(20)
+//stack.enqueue(50)
+//print(stack.head)
+//print(stack.dequeue())

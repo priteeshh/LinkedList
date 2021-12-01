@@ -98,6 +98,19 @@ struct LinkedList<Value>{
         
     }
     
+    mutating func reverse() {
+        var currentNode = head
+        var newNext : Node<Value>? = nil
+        
+        while let node = currentNode{
+            let next = node.next
+            node.next = newNext
+            newNext = node
+            currentNode = next
+        }
+        head = newNext
+    }
+    
     var isEmpty : Bool {
         return head == nil
     }
