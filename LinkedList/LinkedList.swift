@@ -156,3 +156,23 @@ func hasLoop<Value>(n : Node<Value>?) -> Bool{
     }
     return false
 }
+
+ func removeDuplicat(n : Node<Int>?){
+    
+    var loop1 = n
+    var loop2 : Node<Int>? = nil
+    
+    while loop1 != nil && loop1?.next != nil{
+        loop2 = loop1
+        while loop2?.next != nil{
+            if loop1?.value == loop2?.next?.value{
+                loop2?.next = loop2?.next?.next
+            }else{
+                loop2 = loop2?.next
+            }
+        }
+        loop1 = loop1?.next
+    }
+    
+    
+}

@@ -81,3 +81,21 @@ node3.next = node2
 
 //print(node.value)
 print(hasLoop(n: node))
+
+//duplicate
+
+
+var noded = Node(value: 1)
+var noded1 = Node(value: 2)
+var noded2 = Node(value: 3)
+var noded3 = Node(value: 3)
+var noded4 = Node(value: 4)
+
+noded.next = noded1
+noded1.next = noded2
+noded2.next = noded3
+noded3.next = noded4
+print("sjfs")
+print(noded)
+removeDuplicat(n: noded)
+print(noded)
