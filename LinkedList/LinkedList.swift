@@ -141,3 +141,18 @@ func addTwoNodes(n1 : Node<Int>?, n2: Node<Int>?){
     print(linkedList)
     
 }
+func hasLoop<Value>(n : Node<Value>?) -> Bool{
+    
+    var slow = n
+    var fast = n
+    
+    while (fast != nil && slow != nil){
+        slow = slow?.next
+        fast = fast?.next?.next
+        
+        if slow === fast{
+            return true
+        }
+    }
+    return false
+}

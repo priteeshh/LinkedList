@@ -64,3 +64,20 @@ linkedList2.push(6)
 print(linkedList2)
 
 addTwoNodes(n1: linkedList1.head!, n2: linkedList2.head!)
+
+
+
+//Loop
+
+var node = Node(value: 1)
+var node1 = Node(value: 2)
+var node2 = Node(value: 3)
+var node3 = Node(value: 4)
+
+node.next = node1
+node1.next = node2
+node2.next = node3
+node3.next = node2
+
+//print(node.value)
+print(hasLoop(n: node))
